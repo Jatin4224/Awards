@@ -37,7 +37,7 @@ const Hero = () => {
           >
             <video
               ref={nextVideoRef}
-              src={getVideoSrc(currentIndex + 1)}
+              src={getVideoSrc(upcomingVideoIndex)}
               loop
               muted
               id="current-video"
@@ -46,6 +46,7 @@ const Hero = () => {
             />
           </div>
         </div>
+        <video ref={nextVideoRef} src={getVideoSrc(currentIndex)} />
       </div>
     </div>
   );
