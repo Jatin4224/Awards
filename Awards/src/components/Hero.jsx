@@ -6,7 +6,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 3;
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -16,15 +16,16 @@ const Hero = () => {
 
   const handleMiniVideoPlayerClick = () => {
     setHasClicked(true);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalVideos);
+    setCurrentIndex(upcomingVideoIndex);
   };
 
   const getVideoSrc = (index) => {
     return `videos/hero-${index}.mp4`;
   };
+  const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-gray-900">
+    <div className="relative h-screen w-screen overflow-hidden bg-blue-75">
       <div
         id="video-frame"
         className="relative z-10 h-full w-full overflow-hidden rounded-lg bg-blue-75"
