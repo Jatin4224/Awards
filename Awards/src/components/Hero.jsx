@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+
   const [loadedVideos, setLoadedVideos] = useState(0);
 
   const totalVideos = 4;
@@ -100,22 +100,22 @@ const Hero = () => {
           />
         </div>
         <h1 className="special-font hero-heading absolute bottom-5 right-5 text-white">
-          100<b>x</b>Devs
+          100<b className="text-red-700">x</b>Devs
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-20">
+          <div className="mt-34 px-5 sm:px-20">
             <h1 className="special-font hero-heading text-white">
-              100<b>X</b>Match
+              100<b className="text-red-700">X</b>Match
             </h1>
             <p className="mb-5 max-w-64 font-robert-regular text-white">
               Swipe. Connect. Code. <br /> Find Your Perfect Developer Match
-              with 100xCollab!
+              with 100xMatch!
             </p>
             <Button
-              id="watch-trailer"
-              title="Watch Trailer"
+              id="Demor"
+              title="Demo"
               leftIcon={<TiLocationArrow />}
-              containerClass="!bg-yellow-300 flex-center gap-1 rounded-lg w-50"
+              containerClass="!bg-red-700  flex-center gap-1 rounded-lg w-50"
             />
           </div>
         </div>
